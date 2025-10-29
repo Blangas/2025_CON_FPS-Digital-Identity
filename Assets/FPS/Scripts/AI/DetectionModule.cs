@@ -10,6 +10,9 @@ namespace Unity.FPS.AI
         [Tooltip("The point representing the source of target-detection raycasts for the enemy AI")]
         public Transform DetectionSourcePoint;
 
+        [Tooltip("The zone for decetion of enemy")]
+        public Transform detectionZone;
+
         [Tooltip("The max distance at which the enemy can see targets")]
         public float DetectionRange = 20f;
 

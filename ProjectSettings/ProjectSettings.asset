@@ -876,11 +876,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 02393234-e4e3-4ff4-8d5d-949027f4c850
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: 2025_CON_FPS-Digital-Identity
+  organizationId: drugsas
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
