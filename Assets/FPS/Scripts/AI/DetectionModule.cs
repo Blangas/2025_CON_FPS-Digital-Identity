@@ -11,7 +11,7 @@ namespace Unity.FPS.AI
         public Transform DetectionSourcePoint;
 
         [Tooltip("The zone for decetion of enemy")]
-        public Transform detectionZone;
+        public DetectionLight detectionLight;
 
         [Tooltip("The max distance at which the enemy can see targets")]
         public float DetectionRange = 20f;
@@ -63,7 +63,7 @@ namespace Unity.FPS.AI
                 if (otherActor.Affiliation != actor.Affiliation)
                 {
                     float sqrDistance = (otherActor.transform.position - DetectionSourcePoint.position).sqrMagnitude;
-                    if (sqrDistance < sqrDetectionRange && sqrDistance < closestSqrDistance)
+                    if (sqrDistance < sqrDetectionRange && sqrDistance < closestSqrDistance && detectionLight.playerInLight == otherActor)
                     {
                         // Check for obstructions
                         RaycastHit[] hits = Physics.RaycastAll(DetectionSourcePoint.position,

@@ -1,6 +1,7 @@
 using Unity.FPS.Game;
 using UnityEngine;
 
+
 public class DetectionLight : MonoBehaviour
 {
     public Actor playerInLight;
