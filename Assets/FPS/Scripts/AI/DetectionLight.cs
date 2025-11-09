@@ -17,4 +17,16 @@ public class DetectionLight : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Actor actor = other.GetComponent<Actor>();
+            if (actor != null && actor == playerInLight)
+            {
+                playerInLight = null;
+            }
+        }
+    }
 }
