@@ -14,7 +14,9 @@ public class LightRangeControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, maxRange);
+        int layerMaskEnvir = 1 << 0;
+
+        Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, maxRange, layerMaskEnvir);
         if (hitInfo.collider != null)
         {
             float distance = hitInfo.distance;
